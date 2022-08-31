@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Q5: Book a Schedule</title>
+  <script src="javascripts/q5_book_a_schedule.js">  </script>
+</head>
+
+<body>
+  <h1>Q5: Book a Schedule</h1>
+  <p id="loading">Loading...</p>
+  <form action="/api/bookings" method="post" id="schedule" style="visibility:hidden">
+    <label for="id">Schedule:</label><br>
+    <select name="id"></select><br><br>
+    <label for="student_email">Student email:</label><br>
+    <input type="text" name="student_email"><br><br>
+    <input type="submit" value="Submit" disabled><br>
+  </form>
+  <br>
+  <br>
+  <form action="/api/students" method="post" id="student" style="border: 1px dotted black; visibility:hidden">
+    <p>Enter student details:</p>
+    <label for="name">Name:</label><br>
+    <input type="text" name="name"><br><br>
+    <label for="email">Email:</label><br>
+    <input type="text" name="email"><br><br>
+    <label for="booking_sequence">Booking sequence:</label><br>
+    <input type="text" name="booking_sequence" readonly><br><br>
+    <input type="submit" value="Submit" disabled>
+    <br>
+    <br>
+  </form>
+</body>
+
+</html>
